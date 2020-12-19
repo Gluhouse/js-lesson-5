@@ -21,16 +21,14 @@ function app() {
 
 function askInfo(askWhat, isString = true) {
   let info = prompt("Введите " + askWhat);
-  validation(info, isString);
   while (!validation(info, isString)) {
     info = prompt("Введите " + askWhat);
-    validation(info, isString);
   }
   return info;
 }
 
 function validation(item, isString) {
-  if (isString === true && item != "" && item != null && isNaN(item) === true) {
+  if (isString && item != "" && item != null && isNaN(item)) {
     return true;
   } else if (!isString && +item != "" && !isNaN(item)) {
     return true;

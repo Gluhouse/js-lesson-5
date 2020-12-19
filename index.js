@@ -30,7 +30,6 @@ function askInfo(askWhat, isString = true) {
 }
 
 function validation(item, isString) {
-  console.log(isNaN(item));
   if (isString === true && item != "" && item != null && isNaN(item) === true) {
     return true;
   } else if (!isString && +item != "" && !isNaN(item)) {
